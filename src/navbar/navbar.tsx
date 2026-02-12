@@ -8,7 +8,7 @@
 //         <img src={logo} className="logo" alt="Khushi Finance Logo" />
 //       </div>
 
-//       <ul>
+//       <ul>  
 //         <li>Financial Planning </li>
 //         <li className="dropdown">
 //           Loans <i className="fa-solid fa-angle-down"></i>
