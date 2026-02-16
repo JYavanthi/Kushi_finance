@@ -1,0 +1,235 @@
+.au-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.au-popup {
+  background: white;
+  padding: 20px 50px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  position: relative;
+}
+
+.au-popup h3 {
+  font-size: 25px;
+}
+
+.au-popup-btn-whatsapp {
+  display: flex;
+  font-size: 20px;
+  width: 200px;
+  margin: 25px 0px;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #25d366;
+  color: white;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.au-popup-btn-whatsapp:hover {
+  background-color: rgba(0, 128, 0, 0.769);
+}
+
+
+.au-popup-btn-whatsapp i {
+  color: white;
+  font-size: 35px;
+}
+
+
+.au-popup-btn-call {
+  display: flex;
+  width: 200px;
+  margin: 20px 0;
+  padding: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: #29606d;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.au-popup-btn-call i {
+  color: white;
+  font-size: 25px;
+}
+
+.au-popup-btn-call:hover {
+  background-color: #358395;
+}
+
+.au-close-btn {
+  background: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 40px;
+}
+
+.about-page {
+  padding: 120px 64px;
+  background: #ffffff;
+  width: 100%;
+}
+
+.about-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 75px;
+  padding-left: 0px;
+}
+
+/* LEFT CARD */
+.about-card {
+  background: #fff9e9;
+  border: 2px solid #e5d28a;
+  padding: 40px;
+  width: 575px;
+  text-align: center;
+  height: 700px;
+}
+
+.about-logo {
+  width: 325px;
+  margin-bottom: 15px;
+}
+
+.owner-name {
+  color: #004a58;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.owner-role {
+  color: #f09911;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+}
+
+
+.email-btn {
+  background: #116173;
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 28px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.email-btn:hover {
+  background: #1b7c90;
+  transform: translateY(-2px);
+}
+
+
+/* SOCIAL */
+.social-icons {
+  margin-top: 60px;
+  display: flex;
+  gap: 42px;
+  justify-content: center;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #116173;
+  font-size: 26px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff9800;
+  transform: translateY(-4px) scale(1.1);
+}
+
+.fa-instagram,.fa-x-twitter,.fa-facebook-f,.fa-linkedin-in{
+  font-size: 25px;
+}
+
+/* RIGHT CONTENT */
+.about-content2 {
+  flex: 1;
+}
+
+.about-content2 h2 {
+  font-size: 45px;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.about-content2 ul {
+  padding-left: 22px;
+  width: 510px;
+  text-align: justify;
+}
+
+.about-content2 li {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: #333;
+  font-size: 18px;
+}
+
+/* BUTTONS */
+.about-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+  padding-left: 23px;
+}
+
+.apply-btn {
+  background: #f2a23a;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.apply-btn:hover {
+  background: #ff9800;
+  transform: translateY(-2px);
+}
+
+.talk-btn {
+  background: #0a4a55;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.talk-btn:hover {
+  background: #116173;
+  transform: translateY(-2px);
+}

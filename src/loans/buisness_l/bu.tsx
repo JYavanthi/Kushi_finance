@@ -1,0 +1,236 @@
+import "./bu.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import banner from "../../assets/bl/ban.png";
+import leaf from "../../assets/bl/lf.png";
+
+
+import hourglass from "../../assets/bl/hr.png";
+import idea from "../../assets/bl/think.png";
+import business from "../../assets/bl/plan.png";
+import support from "../../assets/bl/lap.png";
+
+import growth from "../../assets/bl/gro.png";
+import working from "../../assets/bl/des.png";
+import machinery from "../../assets/bl/eng.png";
+import office from "../../assets/bl/desk.png";
+import inventory from "../../assets/bl/sel.png";
+
+import st1 from "../../assets/bl/st1.png";
+import st2 from "../../assets/bl/st2.png";
+import st3 from "../../assets/bl/st3.png";
+import st4 from "../../assets/bl/st4.png";
+
+import meetingImg from "../../assets/bl/dis.png";
+
+type ContactPopupProps = {
+    onClose: () => void;
+};
+
+const ContactPopup = ({ onClose }: ContactPopupProps) => (
+    <div className="bl-popup-overlay">
+        <div className="bl-popup">
+
+            <button className="bl-close-btn" onClick={onClose}>
+                <i className="fa-solid fa-x"></i>
+            </button>
+
+            <h3>Contact Us</h3>
+
+            <button
+                className="bl-popup-btn-whatsapp"
+                onClick={() => window.open("https://wa.me/9739871634", "_blank")}
+            >
+                <i className="fa-brands fa-whatsapp"></i> WhatsApp
+            </button>
+
+            <a href="tel:+919739871634" className="bl-popup-btn-call">
+                <i className="fa-solid fa-phone"></i> Call Now
+            </a>
+
+        </div>
+    </div>
+);
+
+const BusinessLoan = () => {
+    const [showPopup, setShowPopup] = useState(false);
+    const navigate = useNavigate();
+    return (
+        <>
+
+            <section className="bl-container">
+
+                {/* HERO SECTION */}
+                <div className="bl-hero">
+                    <img src={banner} alt="Business Loan" className="bl-bg" />
+                    <button className="bl-btn" onClick={() => setShowPopup(true)}>APPLY NOW</button>
+                </div>
+
+                {/* BOTTOM DESCRIPTION */}
+                <div className="bl-description">
+                    <p>
+                        Get the right business loan with expert guidance from Khushi
+                        Finance. We help you choose a suitable loan, plan your EMIs
+                        and complete your application smoothly.
+                    </p>
+
+                    <img src={leaf} alt="leaf" className="bl-leaf" />
+                </div>
+
+            </section>
+
+
+            <section className="bl-details">
+
+                {/* TITLE */}
+                <h2 className="bl-title">
+                    Business <span>loan</span> made <span>simple</span>
+                </h2>
+
+                {/* BOX */}
+                <div className="bl-box">
+
+                    {/* ROW 1 */}
+                    <div className="bl-row">
+                        <img src={hourglass} alt="Flexible tenure" />
+                        <div className="bl-d-text">
+                            <h3>Flexible loan amount and repayment tenure</h3>
+                            <p>
+                                Select the right funding and tenure based on your business goals
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    {/* ROW 2 */}
+                    <div className="bl-row bl-row-reverse">
+                        <div className="bl-d-text">
+                            <h3>Flexible loan amount and repayment tenure</h3>
+                            <p>
+                                Plan repayments clearly without affecting your daily operations
+                            </p>
+                        </div>
+                        <img src={idea} alt="Planning" />
+                    </div>
+
+                    <hr />
+
+                    {/* ROW 3 */}
+                    <div className="bl-row">
+                        <img src={business} alt="MSME" />
+                        <div className="bl-d-text">
+                            <h3>Designed for self-employed, MSMEs and business owners</h3>
+                            <p>
+                                Ideal for traders, professionals and small to mid-sized businesses.
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    {/* ROW 4 */}
+                    <div className="bl-row bl-row-reverse">
+                        <div className="bl-d-text">
+                            <h3>End-to-end support till disbursal</h3>
+                            <p>
+                                We take care of the process from eligibility check to final disbursal
+                            </p>
+                        </div>
+                        <img src={support} alt="Support" />
+                    </div>
+
+                </div>
+            </section>
+
+            <section className="bl-fybf-section">
+
+                {/* TITLE */}
+                <h2 className="bl-fybf-title">
+                    <span>Fund</span> your <span>business</span> for-
+                </h2>
+
+                <div className="bl-fybf-container">
+
+                    {/* 1 */}
+                    <div className="bl-fybf-row">
+                        <img src={growth} alt="" />
+                        <h3>Business growth and expansion</h3>
+                    </div>
+
+                    <img src={st1} className="bl-fybf-string" alt="" />
+
+                    {/* 2 */}
+                    <div className="bl-fybf-row bl-fybf-row-reverse">
+                        <h3>Working capital requirements</h3>
+                        <img src={working} alt="" />
+                    </div>
+
+                    <img src={st2} className="bl-fybf-string" alt="" />
+
+                    {/* 3 */}
+                    <div className="bl-fybf-row">
+                        <img src={machinery} alt="" />
+                        <h3>Machinery and equipment purchase</h3>
+                    </div>
+
+                    <img src={st3} className="bl-fybf-string" alt="" />
+
+                    {/* 4 */}
+                    <div className="bl-fybf-row bl-fybf-row-reverse">
+                        <h3>Office, showroom or branch setup</h3>
+                        <img src={office} alt="" />
+                    </div>
+
+                    <img src={st4} className="bl-fybf-string" alt="" />
+
+                    {/* 5 */}
+                    <div className="bl-fybf-row">
+                        <img src={inventory} alt="" />
+                        <h3>Inventory and operational needs</h3>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section className="bl-f-section">
+
+                <div className="bl-f-container">
+
+                    {/* LEFT CONTENT */}
+                    <div className="bl-f-left">
+                        <h1 className="bl-f-title">
+                            Apply for a business loan today
+                        </h1>
+
+                        <p className="bl-f-subtitle">
+                            Apply for a business loan with Khushi Finance and power your
+                            business growth with clarity, speed and confidence.
+                        </p>
+                    </div>
+
+                    {/* RIGHT IMAGE */}
+                    <div className="bl-f-right">
+                        <img src={meetingImg} alt="Business Meeting" />
+                    </div>
+
+                </div>
+
+                {/* BUTTONS */}
+                <div className="bl-f-btn-wrapper">
+                    <button className="bl-f-btn bl-f-apply" onClick={() => setShowPopup(true)}>APPLY NOW</button>
+                    <button className="bl-f-btn bl-f-contact" onClick={() => navigate("/cu")}>CONTACT US</button>
+                </div>
+
+            </section>
+
+            {showPopup && <ContactPopup onClose={() => setShowPopup(false)} />}
+
+
+        </>
+    );
+};
+
+export default BusinessLoan;
