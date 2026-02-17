@@ -132,7 +132,7 @@ const Navbar = () => {
                 <NavLink to="/sl">Student Loan</NavLink>
               </li>
             </ul>
-          )}
+          )} 
         </li>
 
         {/* <li>

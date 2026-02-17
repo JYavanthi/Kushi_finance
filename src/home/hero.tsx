@@ -12,7 +12,7 @@ import HeroSlider from "./heroslider"
 // import why_bg from "./assets/why_bg.png"
 import control_bg from "../assets/control_bg.png"
 import how_bg from "../assets/how.png"
-import whybg from "../assets/why_bg2.png"
+import whybg from "../assets/why_bg3.png"
 import control from "../assets/control.png"
 import lo from "../assets/fp/lo.png"
 

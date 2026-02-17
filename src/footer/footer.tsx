@@ -90,8 +90,9 @@ const Footer = () => {
       {/* contact us */}
       <div className="contactUs">
         <h3>Contact Us</h3>
-        <p className="lo"><i className="fa-solid fa-location-dot"></i> Bengaluru, India</p>
-        <p className="ph"><i className="fa-solid fa-phone"></i> +91 94483 35635</p>
+        <p className="loc"><i className="fa-solid fa-location-dot"></i>5th Cross, 1st Main
+          Netajinagar, Bengaluru, Karnataka, 560024</p>
+        <p className="ph"><i className="fa-solid fa-phone"></i> +91 9739871634</p>
         <p className="em"><i className="fa-solid fa-envelope"></i> support@khushifinance.com</p>
       </div>
 

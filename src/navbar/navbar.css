@@ -21,22 +21,18 @@
   padding: 10px;
 }
 
-.navbar ul {
+.navbar > ul {
   list-style: none;
   display: flex;
-  gap: 65px;
+  gap: 80px;
   align-items: center;
   width: 100%;
-  font-size: 20px;
+  font-size: 25px;
 }
 
-.navbar ul li {
+.navbar >ul> li {
   position: relative;
   cursor: pointer;
-}
-
-.navbar ul li>i {
-  margin-left: 6px;
 }
 
 .navbar a {
@@ -49,6 +45,16 @@
 .navbar a.active {
   color: #0b9b9b;
 
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown span i {
+  position: absolute;
+  left: 68px;
+  bottom: 0px;
 }
 
 
@@ -65,7 +71,7 @@
   z-index: 1000;
   flex-direction: column !important;
   gap: 0 !important;
-  align-items: center !important;
+  align-items: left !important;
 }
 
 .dd li {
@@ -89,4 +95,3 @@
 .dropdown:hover i {
   transform: rotate(180deg);
 }
-
