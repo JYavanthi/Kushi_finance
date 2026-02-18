@@ -269,3 +269,78 @@
   font-size: 18px;
   font-weight: 700;
 }
+
+/* ===================== */
+/* RESPONSIVE BREAKPOINTS */
+/* ===================== */
+@media (max-width: 1024px) {
+  .about-text p {
+    font-size: 28px;
+  }
+
+  .links-title h2,
+  .services-title h2 {
+    font-size: 28px;
+  }
+
+  .quick-links li {
+    font-size: 22px;
+  }
+
+  .services-links li {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .link-groups {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .quick-links {
+    border-right: none;
+    padding: 0;
+  }
+
+  .about-text p {
+    font-size: 25px;
+    width: 90%;
+  }
+
+  .contactUs h3 {
+    font-size: 26px;
+  }
+
+  .contactUs p.loc,
+  .contactUs p.ph,
+  .contactUs p.em {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 24px;
+    gap: 15px;
+  }
+
+  .about-text p {
+    font-size: 20px;
+  }
+
+  .quick-links li,
+  .services-links li {
+    font-size: 18px;
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+
+  .contactUs h3 {
+    font-size: 22px;
+  }
+
+  .footer-bottom {
+    font-size: 16px;
+  }
+}
