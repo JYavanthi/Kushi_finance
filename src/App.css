@@ -5,12 +5,42 @@
   /* text-align: center; */
 }
 
-.logo {
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* body {
+  padding-top: 75px;
+} */
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 25px;
+  }
+}
+
+/* .logo {
   height: 75px;
   padding: 10px;
   /* will-change: filter;
-  transition: filter 300ms; */
-}
+  transition: filter 300ms;
+} */
 /* .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }

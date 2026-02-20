@@ -1,4 +1,6 @@
 import "./bu.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import banner from "../../assets/bl/ban.png";
 import leaf from "../../assets/bl/lf.png";
@@ -22,8 +24,38 @@ import st4 from "../../assets/bl/st4.png";
 
 import meetingImg from "../../assets/bl/dis.png";
 
+type ContactPopupProps = {
+    onClose: () => void;
+};
+
+const ContactPopup = ({ onClose }: ContactPopupProps) => (
+    <div className="bl-popup-overlay">
+        <div className="bl-popup">
+
+            <button className="bl-close-btn" onClick={onClose}>
+                <i className="fa-solid fa-x"></i>
+            </button>
+
+            <h3>Contact Us</h3>
+
+            <button
+                className="bl-popup-btn-whatsapp"
+                onClick={() => window.open("https://wa.me/9739871634", "_blank")}
+            >
+                <i className="fa-brands fa-whatsapp"></i> WhatsApp
+            </button>
+
+            <a href="tel:+919739871634" className="bl-popup-btn-call">
+                <i className="fa-solid fa-phone"></i> Call Now
+            </a>
+
+        </div>
+    </div>
+);
 
 const BusinessLoan = () => {
+    const [showPopup, setShowPopup] = useState(false);
+    const navigate = useNavigate();
     return (
         <>
 
@@ -32,7 +64,7 @@ const BusinessLoan = () => {
                 {/* HERO SECTION */}
                 <div className="bl-hero">
                     <img src={banner} alt="Business Loan" className="bl-bg" />
-                    <button className="bl-btn">APPLY NOW</button>
+                    <button className="bl-btn" onClick={() => setShowPopup(true)}>APPLY NOW</button>
                 </div>
 
                 {/* BOTTOM DESCRIPTION */}
@@ -188,11 +220,13 @@ const BusinessLoan = () => {
 
                 {/* BUTTONS */}
                 <div className="bl-f-btn-wrapper">
-                    <button className="bl-f-btn bl-f-apply">APPLY NOW</button>
-                    <button className="bl-f-btn bl-f-contact">CONTACT US</button>
+                    <button className="bl-f-btn bl-f-apply" onClick={() => setShowPopup(true)}>APPLY NOW</button>
+                    <button className="bl-f-btn bl-f-contact" onClick={() => navigate("/cu")}>CONTACT US</button>
                 </div>
 
             </section>
+
+            {showPopup && <ContactPopup onClose={() => setShowPopup(false)} />}
 
 
         </>

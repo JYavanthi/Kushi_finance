@@ -1,110 +1,363 @@
+.au-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.au-popup {
+  background: white;
+  padding: 20px 50px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  position: relative;
+}
+
+.au-popup h3 {
+  font-size: 25px;
+}
+
+.au-popup-btn-whatsapp {
+  display: flex;
+  font-size: 20px;
+  width: 200px;
+  margin: 25px 0px;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #25d366;
+  color: white;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.au-popup-btn-whatsapp:hover {
+  background-color: rgba(0, 128, 0, 0.769);
+}
+
+
+.au-popup-btn-whatsapp i {
+  color: white;
+  font-size: 35px;
+}
+
+
+.au-popup-btn-call {
+  display: flex;
+  width: 200px;
+  margin: 20px 0;
+  padding: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: #29606d;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.au-popup-btn-call i {
+  color: white;
+  font-size: 25px;
+}
+
+.au-popup-btn-call:hover {
+  background-color: #358395;
+}
+
+.au-close-btn {
+  background: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 40px;
+}
+
 .about-page {
-    padding: 120px 64px;
-    background: #ffffff;
-    width: 100%;
+  padding: 120px 64px;
+  background: #ffffff;
+  width: 100%;
 }
 
 .about-wrapper {
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
-    gap: 75px;
-    padding-left: 0px;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 75px;
+  padding-left: 0px;
 }
 
 /* LEFT CARD */
 .about-card {
-    background: #fff9e9;
-    border: 2px solid #e5d28a;
-    padding: 40px;
-    width: 575px;
-    text-align: center;
-    height: 700px;
+  background: #fff9e9;
+  border: 2px solid #e5d28a;
+  padding: 40px;
+  width: 575px;
+  text-align: center;
+  height: 715px;
 }
 
 .about-logo {
-    width: 325px;
-    margin-bottom: 15px;
+  width: 325px;
+  margin-bottom: 15px;
 }
 
 .owner-name {
-    color: #004a58;
-    font-size: 35px;
-    margin-bottom: 30px;
+  color: #004a58;
+  font-size: 35px;
+  margin-bottom: 30px;
 }
 
 .owner-role {
-    color: #f09911;
-    font-size: 24px;
-    letter-spacing: 1px;
-    margin-bottom: 35px;
+  color: #f09911;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
 }
 
 
 .email-btn {
-    background: #004a58;
-    color: white;
-    border: none;
-    padding: 10px 10px;
-    cursor: pointer;
-    margin-bottom: 50px;
-    width: 180px;
+  background: #116173;
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 28px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 33px;
-    font-size: 36px;
-    color: #0a4a55;
+.email-btn:hover {
+  background: #1b7c90;
+  transform: translateY(-2px);
 }
+
+
+/* SOCIAL */
+.social-icons {
+  margin-top: 70px;
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #116173;
+  font-size: 26px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover .fa-facebook-f {
+  color: #2b5598;
+}
+
+.social-icons a:hover .fa-instagram {
+  color: #e4405f;
+}
+
+.social-icons a:hover .fa-x-twitter {
+  color: #000;
+
+}
+
+.social-icons a:hover .fa-linkedin-in {
+  color: #0069b2;
+
+}
+
+
+.social-icons a i {
+  font-size: 35px;
+}
+
 
 /* RIGHT CONTENT */
 .about-content2 {
-    flex: 1;
+  flex: 1;
 }
 
 .about-content2 h2 {
-    font-size: 45px;
-    margin-bottom: 25px;
-    color: #222;
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #222;
+  margin-top: 0px;
 }
 
 .about-content2 ul {
-    padding-left: 22px;
-    width: 510px;
-    text-align: justify;
+  padding-left: 22px;
+  width: 700px;
+  text-align: justify;
 }
 
 .about-content2 li {
-    margin-bottom: 16px;
-    line-height: 1.6;
-    color: #333;
-    font-size: 18px;
+  margin-bottom: 17px;
+  line-height: 1.6;
+  color: #333;
+  font-size: 22px;
 }
 
 /* BUTTONS */
 .about-buttons {
-    margin-top: 30px;
-    display: flex;
-    gap: 30px;
-    padding-left: 23px;
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+  padding-left: 23px;
 }
 
 .apply-btn {
-    background: #f2a23a;
-    color: white;
-    border: none;
-    padding: 12px 22px;
-    cursor: pointer;
-    font-size: 20px;
+  background: #f2a23a;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.apply-btn:hover {
+  background: #ff9800;
+  transform: translateY(-2px);
 }
 
 .talk-btn {
-    background: #0a4a55;
-    color: white;
-    border: none;
-    padding: 12px 22px;
-    cursor: pointer;
+  background: #0a4a55;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.talk-btn:hover {
+  background: #116173;
+  transform: translateY(-2px);
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+
+  .about-page {
+    padding: 80px 40px;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .about-card {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+  }
+
+  .about-logo {
+    width: 220px;
+  }
+
+  .about-content2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-content2 ul {
+    width: 100%;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .about-buttons {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  /* POPUP */
+  .au-popup {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .au-popup h3 {
     font-size: 20px;
+  }
+
+  .au-popup-btn-whatsapp,
+  .au-popup-btn-call {
+    width: 100%;
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  /* ABOUT PAGE */
+  .about-page {
+    padding: 60px 20px;
+  }
+
+  .owner-name {
+    font-size: 28px;
+  }
+
+  .owner-role {
+    font-size: 18px;
+  }
+
+  .about-content2 h2 {
+    font-size: 30px;
+  }
+
+  .about-content2 li {
+    font-size: 16px;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+
+  .about-logo {
+    width: 160px;
+  }
+
+  .social-icons {
+    gap: 24px;
+  }
+
+  .about-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .apply-btn,
+  .talk-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
 }

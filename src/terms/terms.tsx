@@ -1,10 +1,31 @@
 import "./terms.css";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const TermsPolicies = () => {
+
+  const location = useLocation();
+
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const el = document.getElementById(id);
+
+      setTimeout(() => {
+        el?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, [location]);
+
+
   return (
     <section className="tp-page">
-      <div className="tp-container">
-        <h1>Terms & Conditions</h1>
+
+      {/* ===== TERMS SECTION ===== */}
+      <div id="terms" className="tp-container">
+
+        <h1 className="tp-main-title">Terms & Conditions</h1>
         <p className="tp-updated">Last updated: January 2026</p>
 
         <div className="tp-section">
@@ -32,10 +53,16 @@ const TermsPolicies = () => {
           </p>
         </div>
 
-        <h1 className="tp-policy-title">Privacy Policy</h1>
+      </div>
+
+
+      {/* ===== PRIVACY SECTION ===== */}
+      <div id="privacy" className="tp-container">
+
+        <h1 className="tp-main-title">Privacy Policy</h1>
 
         <div className="tp-section">
-          <h2>4. Information We Collect</h2>
+          <h2>1. Information We Collect</h2>
           <p>
             We may collect personal information such as name, email address, and
             usage data to improve our services.
@@ -43,7 +70,7 @@ const TermsPolicies = () => {
         </div>
 
         <div className="tp-section">
-          <h2>5. How We Use Your Information</h2>
+          <h2>2. How We Use Your Information</h2>
           <p>
             Your information is used to provide better services, respond to
             inquiries, and improve user experience.
@@ -51,7 +78,7 @@ const TermsPolicies = () => {
         </div>
 
         <div className="tp-section">
-          <h2>6. Data Protection</h2>
+          <h2>3. Data Protection</h2>
           <p>
             We take appropriate security measures to protect your data against
             unauthorized access or disclosure.
@@ -59,13 +86,15 @@ const TermsPolicies = () => {
         </div>
 
         <div className="tp-section">
-          <h2>7. Changes to These Policies</h2>
+          <h2>4. Changes to These Policies</h2>
           <p>
-            We may update these Terms and Policies from time to time. Continued
-            use of the website means you accept the updated terms.
+            We may update these policies from time to time. Continued
+            use of the website means you accept the updated version.
           </p>
         </div>
+
       </div>
+
     </section>
   );
 };

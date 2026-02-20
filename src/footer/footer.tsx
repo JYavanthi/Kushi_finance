@@ -1,7 +1,24 @@
 import "./Footer.css";
+import { useNavigate, useLocation } from "react-router-dom";
+
+
 import coin from "../assets/coin.png";
 
+
+
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const location = useLocation();
+
+  const goTopOrNavigate = (path: string) => {
+    if (location.pathname === path) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate(path);
+    }
+  };
+
   return (
     <section className="about-khushi">
 
@@ -39,13 +56,18 @@ const Footer = () => {
           </div>
 
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Loans</li>
-            <li>Contact Us</li>
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
+            <li onClick={() => goTopOrNavigate("/")}>Home</li>
+
+            <li onClick={() => goTopOrNavigate("/au")}>About</li>
+
+            {/* <li onClick={()=>navigate("/s")}>Services</li> */}
+            <li onClick={() => navigate("/#loan")}>Loans</li>
+
+            <li onClick={() => goTopOrNavigate("/cu")}>Contact</li>
+
+            <li onClick={() => navigate("/t#privacy")}>Privacy Policy</li>
+            <li onClick={() => navigate("/t#terms")}>Terms & Conditions</li>
+
           </ul>
 
         </div>
@@ -56,11 +78,11 @@ const Footer = () => {
           </div>
 
           <ul>
-            <li>Financial Consultation</li>
-            <li>Personal Loans</li>
-            <li>Home Loans</li>
-            <li>Business Loans</li>
-            <li>Education Loans</li>
+            <li onClick={() => goTopOrNavigate("/fp")}>Financial Consultation</li>
+            <li onClick={() => goTopOrNavigate("/pl")}>Personal Loans</li>
+            <li onClick={() => goTopOrNavigate("/hl")}>Home Loans</li>
+            <li onClick={() => goTopOrNavigate("/bl")}>Business Loans</li>
+            <li onClick={() => goTopOrNavigate("/sl")}>Education Loans</li>
           </ul>
         </div>
       </div>
@@ -68,8 +90,9 @@ const Footer = () => {
       {/* contact us */}
       <div className="contactUs">
         <h3>Contact Us</h3>
-        <p className="lo"><i className="fa-solid fa-location-dot"></i> Bengaluru, India</p>
-        <p className="ph"><i className="fa-solid fa-phone"></i> +91 94483 35635</p>
+        <p className="loc"><i className="fa-solid fa-location-dot"></i>5th Cross, 1st Main
+          Netajinagar, Bengaluru, Karnataka, 560024</p>
+        <p className="ph"><i className="fa-solid fa-phone"></i> +91 9739871634</p>
         <p className="em"><i className="fa-solid fa-envelope"></i> support@khushifinance.com</p>
       </div>
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import financialconsultation from "../assets/images/fco.jpg";
 import loanassistant from "../assets/images/la.jpg";
 import incomeexpenses from "../assets/images/ie.jpg";
@@ -38,6 +38,14 @@ const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
   const total = slides.length;
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent(prev => (prev + 1) % total);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, [current,total]);
+
   const prevSlide = () =>
     setCurrent((prev) => (prev === 0 ? total - 1 : prev - 1));
 
@@ -58,8 +66,8 @@ const HeroSlider = () => {
 
       <div className="hero-slider-container">
         {/* LEFT IMAGE STACK */}
-        <div className="image-stack">
-          
+        <div className="image-stack" key={current}>
+
           <div className="img very-small">
             <img src={slides[getIndex(-3)].img} />
           </div>
@@ -95,9 +103,12 @@ const HeroSlider = () => {
           <span
             key={index}
             className={`dot ${current === index ? "active" : ""}`}
+            onClick={() => setCurrent(index)}
+            style={{ cursor: "pointer" }}
           ></span>
         ))}
       </div>
+
 
       <button className="arrow right" onClick={nextSlide}>
         &#10095;

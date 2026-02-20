@@ -1,4 +1,6 @@
 import "./personal.css";
+import { useState } from "react";
+
 import banner from "../../assets/pl/banner.jpg";
 import lo from "../../assets/fp/lo.png";
 import ku from "../../assets/pl/kushi.png";
@@ -30,7 +32,39 @@ import s4 from "../../assets/pl/s4.png";
 
 import expertImg from "../../assets/pl/expert.jpg";
 
+type ContactPopupProps = {
+    onClose: () => void;
+};
+
+const ContactPopup = ({ onClose }: ContactPopupProps) => (
+    <div className="pl-popup-overlay">
+        <div className="pl-popup">
+
+            <button className="pl-close-btn" onClick={onClose}>
+                <i className="fa-solid fa-x"></i>
+            </button>
+
+            <h3>Contact Us</h3>
+
+            <button
+                className="pl-popup-btn-whatsapp"
+                onClick={() => window.open("https://wa.me/9739871634", "_blank")}
+            >
+                <i className="fa-brands fa-whatsapp"></i> WhatsApp
+            </button>
+
+            <a href="tel:+919739871634" className="pl-popup-btn-call">
+                <i className="fa-solid fa-phone"></i> Call Now
+            </a>
+
+        </div>
+    </div>
+);
+
+
+
 const PersonalLoan = () => {
+    const [showPopup, setShowPopup] = useState(false);
     return (
         <>
             {/* BANNER SECTION */}
@@ -43,10 +77,11 @@ const PersonalLoan = () => {
                 </div>
 
                 <div className="pl-buttons">
-                    <button className="btn-primary">Get Your Consultation Now</button>
-                    <button className="btn-outline">Check Your CIBIL Score</button>
+                    <button className="btn-primary" onClick={() => setShowPopup(true)}>Get Your Consultation Now</button>
+                    {/* <button className="btn-outline">Check Your CIBIL Score</button> */}
                 </div>
             </section>
+
 
             {/* DETAILS SECTION */}
             <section className="pl-details">
@@ -139,21 +174,21 @@ const PersonalLoan = () => {
                 <div className="process-steps">
 
                     <div className="process-row-left">
-                        <img src={step1} alt="" className="step1"/>
+                        <img src={step1} alt="" className="step1" />
                         <p>Share your basic details</p>
                     </div>
 
                     <img src={s1} className="process-string s1-left-string" alt="" />
 
                     <div className="process-row-right">
-                        <img src={step2} alt="" className="step2"/>
+                        <img src={step2} alt="" className="step2" />
                         <p>Choose your preferred loan amount and tenure</p>
                     </div>
 
                     <img src={s2} className="process-string s2-right-string" alt="" />
 
                     <div className="process-row-left">
-                        <img src={step3} alt="" className="step3"/>
+                        <img src={step3} alt="" className="step3" />
                         <p className="">Get eligibility checked instantly</p>
                     </div>
 
@@ -167,7 +202,7 @@ const PersonalLoan = () => {
                     <img src={s4} className="process-string s4-right-string" alt="" />
 
                     <div className="process-row-left">
-                        <img src={step5} alt="" className="step5"/>
+                        <img src={step5} alt="" className="step5" />
                         <p>Receive disbursal support</p>
                     </div>
 
@@ -195,8 +230,8 @@ const PersonalLoan = () => {
 
                 {/* BUTTONS */}
                 <div className="ts-buttons">
-                    <button className="btn-one">Apply For Personal Loan</button>
-                    <button className="btn-two">Check Eligibility</button>
+                    <button className="btn-one" onClick={() => setShowPopup(true)}>Apply For Personal Loan</button>
+                    {/* <button className="btn-two">Check Eligibility</button> */}
                 </div>
 
                 {/* BOTTOM SECTION */}
@@ -210,13 +245,22 @@ const PersonalLoan = () => {
                             Get Your <span>Doubts</span> Clarified <br />
                             By Our <span>Experts</span>
                         </h3>
-                        <button className="btn-expert">Talk to a Loan Expert</button>
+                        <button className="btn-expert"
+                            onClick={() => {
+                                const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+                                if (isMobile) {
+                                    window.location.href = "tel:+919739871634";   // direct call on phone
+                                } else {
+                                    setShowPopup(true);
+                                }
+                            }}>Talk to a Loan Expert</button>
                     </div>
                 </div>
 
             </section>
 
-
+            {showPopup && <ContactPopup onClose={() => setShowPopup(false)} />}
         </>
     );
 };

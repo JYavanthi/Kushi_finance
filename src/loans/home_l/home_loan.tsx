@@ -1,4 +1,7 @@
 import "./home_loan.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import heroHouse from "../../assets/hl/home.jpg";
 import applyImg from "../../assets/hl/apply.jpg";
 import flexibleImg from "../../assets/hl/flex.jpg";
@@ -9,7 +12,38 @@ import loanTypesImg from "../../assets/hl/lt.jpg";
 import lo from "../../assets/fp/lo.png"
 import familyImg from "../../assets/hl/fam.jpg";
 
+
+type ContactPopupProps = {
+  onClose: () => void;
+};
+
+const ContactPopup = ({ onClose }: ContactPopupProps) => (
+  <div className="hl-popup-overlay">
+    <div className="hl-popup">
+
+      <button className="hl-close-btn" onClick={onClose}>
+        <i className="fa-solid fa-x"></i>
+      </button>
+
+      <h3>Contact Us</h3>
+
+      <button
+        className="hl-popup-btn-whatsapp"
+        onClick={() => window.open("https://wa.me/9739871634", "_blank")}
+      >
+        <i className="fa-brands fa-whatsapp"></i> WhatsApp
+      </button>
+
+      <a href="tel:+919739871634" className="hl-popup-btn-call">
+        <i className="fa-solid fa-phone"></i> Call Now
+      </a>
+
+    </div>
+  </div>
+);
 const HomeLoan = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const navigate = useNavigate();
   return (
     <div className="home-loan">
 
@@ -26,7 +60,7 @@ const HomeLoan = () => {
             We help you choose the right housing loan, plan your EMIs and complete
             your application smoothly.
           </p>
-          <button className="hl-btn-primary">APPLY NOW</button>
+          <button className="hl-btn-primary" onClick={() => setShowPopup(true)}>APPLY NOW</button>
         </div>
       </section>
 
@@ -109,13 +143,15 @@ const HomeLoan = () => {
             </p>
           </div>
         </div>
-        
+
         <div className="hl-cta-buttons">
-          <button className="hl-cta-btn-primary">APPLY NOW</button>
-          <button className="hl-cta-btn-secondary">CONTACT US</button>
+          <button className="hl-cta-btn-primary" onClick={() => setShowPopup(true)}>APPLY NOW</button>
+          <button className="hl-cta-btn-secondary" onClick={() => navigate("/cu")}>CONTACT US</button>
         </div>
 
       </section>
+
+      {showPopup && <ContactPopup onClose={() => setShowPopup(false)} />}
 
     </div>
   );

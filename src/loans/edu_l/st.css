@@ -1,24 +1,117 @@
+.sl-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.sl-popup {
+    background: white;
+    padding: 20px 50px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+.sl-popup h3 {
+    font-size: 25px;
+}
+
+.sl-popup-btn-whatsapp {
+    display: flex;
+    font-size: 20px;
+    width: 200px;
+    margin: 25px 0px;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #25d366;
+    color: white;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sl-popup-btn-whatsapp:hover {
+    background-color: rgba(0, 128, 0, 0.769);
+}
+
+
+.sl-popup-btn-whatsapp i {
+    color: white;
+    font-size: 35px;
+}
+
+
+.sl-popup-btn-call {
+    display: flex;
+    width: 200px;
+    margin: 20px 0;
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #29606d;
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sl-popup-btn-call i {
+    color: white;
+    font-size: 25px;
+}
+
+.sl-popup-btn-call:hover {
+    background-color: #358395;
+}
+
+.sl-close-btn {
+    background: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 40px;
+}
+
 .sl-hero {
     position: relative;
     width: 100%;
     height: 670px;
     margin-top: 80px;
+
 }
 
 /* Background Image */
 .sl-bg {
     width: 100%;
-    height: 100%;
+    height: 790px;
     object-fit: cover;
+    border-bottom: 2px solid #b0afac;
 }
 
 /* Apply Button */
 .sl-btn {
     position: absolute;
-    bottom: 80px;
-    left: 450px;
+    top: 630px;
+    left: 510px;
     padding: 15px 50px;
-    font-size: 35px;
+    font-size: 50px;
     font-weight: 600;
     border: none;
     border-radius: 40px;
@@ -29,7 +122,7 @@
 }
 
 .sl-btn:hover {
-    opacity: 0.9;
+    background: linear-gradient(to right, #0b6b6b, #4aa856);
 }
 
 /* ep-section */
@@ -41,6 +134,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 60px;
+    border-bottom: 2px solid #b0afac;
 }
 
 /* Title */
@@ -49,7 +144,7 @@
     font-weight: 700;
     margin-bottom: -2px;
     color: #0b6b6b;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #b0afac;
     margin-left: 10px;
     width: 820px;
     padding-bottom: 15px;
@@ -138,6 +233,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 2px solid #b0afac
 }
 
 /* Title */
@@ -147,7 +243,7 @@
     margin-bottom: 56px;
     text-align: center;
     color: #0b6b6b;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #b0afac;
     padding-bottom: 20px;
     width: 850px;
 }
@@ -221,46 +317,41 @@
 }
 
 .sa-string-1 {
-    position: relative;
     width: 170px;
     object-fit: contain;
-    left: 195px;
-    top: 15px;
+    margin-left: 195px;
+    margin-top: 15px;
 }
 
 
 .sa-string-2 {
-    position: relative;
     width: 200px;
     object-fit: contain;
-    left: 575px;
-    top: 5px;
+    margin-left: 575px;
+    margin-top: 5px;
 }
 
 
 .sa-string-3 {
-    position: relative;
     width: 165px;
     object-fit: contain;
-    left: 196px;
-    top: 10px;
+    margin-left: 196px;
+    margin-top: 10px;
 }
 
 
 .sa-string-4 {
-    position: relative;
     width: 210px;
     object-fit: contain;
-    left: 525px;
-    top: 8px;
+    margin-left: 525px;
+    margin-top: 8px;
 }
 
 
 .sa-string-5 {
-    position: relative;
     width: 185px;
     object-fit: contain;
-    left: 170px;
+    margin-left: 170px;
 }
 
 /* Section */
@@ -274,7 +365,7 @@
 /* Container */
 .l-container {
     width: 1000px;
-    margin: 0px 135px
+    margin: 0px 250px;
 }
 
 /* Content layout */
@@ -293,9 +384,9 @@
 .l-buttons {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 45px;
     position: absolute;
-    right: 205px;
+    right: 250px;
 }
 
 /* Base button */

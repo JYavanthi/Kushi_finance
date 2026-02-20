@@ -1,3 +1,10 @@
+import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+
 import hero from "../assets/hero.png"
 import moneyBg from "../assets/moneyBg.png"
 import calculator from "../assets/calculator.png"
@@ -5,13 +12,34 @@ import HeroSlider from "./heroslider"
 // import why_bg from "./assets/why_bg.png"
 import control_bg from "../assets/control_bg.png"
 import how_bg from "../assets/how.png"
-import whybg from "../assets/why_bg2.png"
+import whybg from "../assets/why_bg3.png"
 import control from "../assets/control.png"
 import lo from "../assets/fp/lo.png"
 
+import useScaleGap from "../usescale";
+
+
 const Hero = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const loanRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+  useScaleGap()
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const el = document.getElementById(id);
+
+      setTimeout(() => {
+        el?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, [location]);
+
+
   return (
-    <>
+    <div className="page-scaler">
       <section className="hero">
         <div className="hero-text">
           <h1>
@@ -21,10 +49,23 @@ const Hero = () => {
           <p>Clarity, control, and confidence for your financial journey.</p>
           <div className="hero-button-group">
             <div className="hero-button1">
-              <button style={{ backgroundColor: "#29606d", color: "white", border: "none" }}>Book a free <br /> consultation <i className="fa-solid fa-phone"></i></button>
+              <button style={{ backgroundColor: "#29606d", color: "white", border: "none" }} onClick={() => setShowPopup(true)}>Book a free <br /> consultation <i className="fa-solid fa-phone"></i></button>
             </div>
             <div className="hero-button2">
-              <button style={{ backgroundColor: "#ffbd59", color: "white", border: "none", padding: "15px 16px", borderRadius: "12px", fontSize: "25px", width: "252px" }}>check loan options</button>
+              <button
+                style={{
+                  backgroundColor: "#ffbd59",
+                  color: "white",
+                  border: "none",
+                  padding: "15px 16px",
+                  borderRadius: "12px",
+                  fontSize: "25px",
+                  width: "252px",
+                  cursor: "pointer"
+                }}
+
+                onClick={() => loanRef.current?.scrollIntoView({ behavior: "smooth" })}
+              >check loan options</button>
             </div>
           </div>
         </div>
@@ -33,6 +74,36 @@ const Hero = () => {
           <img src={hero} alt="Hero Image" />
         </div>
       </section>
+
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup">
+            <button
+              className="close-btn"
+              onClick={() => setShowPopup(false)}
+            >
+              <i className="fa-solid fa-x"></i>
+            </button>
+            <h3>Contact Us</h3>
+
+            <button
+              className="popup-btn-whatsapp"
+              onClick={() =>
+                window.open("https://wa.me/9739871634", "_blank")
+              }
+            >
+              <i className="fa-brands fa-whatsapp"></i>WhatsApp
+            </button>
+
+            <a href="tel:+919739871634" className="popup-btn-call">
+              <i className="fa-solid fa-phone"></i>Call Now
+            </a>
+
+
+          </div>
+        </div>
+      )}
+
 
       <section className="features-section">
         <div className="features-container">
@@ -66,7 +137,7 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="about-banner" style={{ backgroundImage: `url(${moneyBg})`,width: "100%" }}>
+      <section className="about-banner" style={{ backgroundImage: `url(${moneyBg})`, width: "100%" }}>
         <div className="about-content">
           <h2>Smart Financial Solutions, Built Around You</h2>
           <div className="acm">
@@ -77,8 +148,8 @@ const Hero = () => {
               advice and solutions tailored to your needs.
             </p>
             <img src={lo} alt="logo" className="lo1" />
-            </div>
           </div>
+        </div>
       </section>
 
       {/* <section className="hero-slider">
@@ -116,7 +187,7 @@ const Hero = () => {
 </section> */}
       <HeroSlider />
 
-      <section className="loan-assistance">
+      <section id="loan" ref={loanRef} className="loan-assistance">
         <div className="loan-layout">
 
           <div className="assistance_container">
@@ -131,29 +202,29 @@ const Hero = () => {
               <div className="loan-options">
                 <div className="loan-pill">
                   <img src="/src/assets/bg_icon.png" />
-                  <button>Personal Loans</button>
+                  <button onClick={() => navigate("/pl")}>Personal Loans</button>
                 </div>
 
                 <div className="loan-pill">
                   <img src="/src/assets/h_icon.png" />
-                  <button>Home Loans</button>
+                  <button onClick={() => navigate("/hl")}>Home Loans</button>
                 </div>
 
                 <div className="loan-pill">
                   <img src="/src/assets/b_icon.png" />
-                  <button>Business Loans</button>
+                  <button onClick={() => navigate("/bl")}>Business Loans</button>
                 </div>
-
+ 
                 <div className="loan-pill">
                   <img src="/src/assets/ed_icon.png" />
-                  <button>Education Loans</button>
+                  <button onClick={() => navigate("/sl")}>Education Loans</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <p className="section-subtitle">
-            We compare lenders, negotiate for you, and simplify the process.
+          We compare lenders, negotiate for you, and simplify the process.
         </p>
       </section>
 
@@ -253,7 +324,7 @@ const Hero = () => {
             {/* RIGHT */}
             <div className="ct-content">
               <p>Speak to a certified financial expert today.</p>
-              <button className="primary-btn">
+              <button className="primary-btn" onClick={() => navigate("/cu")}>
                 Book Your Free Consultation
               </button>
             </div>
@@ -262,7 +333,7 @@ const Hero = () => {
         </div>
       </section>
 
-    </>
+    </div>
   )
 }
 export default Hero
