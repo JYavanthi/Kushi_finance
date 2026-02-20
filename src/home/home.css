@@ -952,101 +952,6 @@
 
 
 
-/* =========================
-   LAPTOP → TABLET
-========================= */
-
-@media (max-width:1024px) {
-
-  .hero-text h1 {
-    font-size: 38px;
-    margin-left: 20px;
-  }
-
-  .hero-text p {
-    font-size: 140%;
-    margin-left: 20px;
-  }
-
-  .hero-button1,
-  .hero-button2 {
-    margin-left: 20px;
-  }
-
-  .hero-image img {
-    width: 450px;
-  }
-}
-
-
-/* =========================
-   TABLET → MOBILE
-========================= */
-
-@media (max-width:768px) {
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 32px;
-    margin-left: 0;
-  }
-
-  .hero-text p {
-    margin: 15px 0;
-    font-size: 120%;
-  }
-
-  .hero-button-group {
-    align-items: center;
-  }
-
-  .hero-button1,
-  .hero-button2 {
-    margin-left: 0;
-  }
-
-  .hero-image img {
-    width: 90%;
-    margin-top: 20px;
-  }
-}
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width:480px) {
-
-  .hero-text h1 {
-    font-size: 26px;
-  }
-
-  .hero-text p {
-    font-size: 105%;
-  }
-
-  .hero-button1 button,
-  .hero-button2 button {
-    width: 100%;
-    max-width: 260px;
-    font-size: 18px;
-    padding: 12px;
-  }
-
-  .hero-button1 button i {
-    width: 34px;
-    height: 34px;
-    padding: 6px;
-  }
-
-}
-
-
 .features-section {
   /* padding: 10px 0; */
   background: white;
@@ -1094,90 +999,6 @@
 
 .feature-item p {
   font-size: 30px;
-}
-
-
-
-
-
-/* =========================
-   LAPTOP → TABLET
-========================= */
-
-@media (max-width:1024px) {
-
-  .features-image img {
-    height: 300px;
-  }
-
-  .features-box {
-    font-size: 26px;
-  }
-
-  .feature-item img {
-    width: 100px;
-    height: 45px;
-  }
-
-  .feature-item p {
-    font-size: 26px;
-  }
-
-}
-
-
-/* =========================
-   TABLET → MOBILE
-========================= */
-
-@media (max-width:768px) {
-
-  .features-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .features-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  .features-box {
-    align-items: center;
-    font-size: 24px;
-  }
-
-  .feature-item {
-    justify-content: center;
-  }
-
-}
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width:480px) {
-
-  .features-box {
-    font-size: 20px;
-  }
-
-  .feature-item {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .feature-item img {
-    width: 80px;
-    height: auto;
-  }
-
-  .feature-item p {
-    font-size: 18px;
-  }
-
 }
 
 
@@ -1241,99 +1062,6 @@
   margin-top: 50px;
   color: #29606d;
   margin-bottom: 20px;
-}
-
-
-
-/* ======================
-   LAPTOP → TABLET
-====================== */
-
-@media (max-width:1024px) {
-
-  .about-banner {
-    padding: 70px 20px;
-  }
-
-  .about-content h2 {
-    font-size: 30px;
-  }
-
-  .acm p {
-    font-size: 22px;
-  }
-
-  .core-title {
-    font-size: 42px;
-  }
-
-}
-
-
-/* ======================
-   TABLET → MOBILE
-====================== */
-
-@media (max-width:768px) {
-
-  .about-banner {
-    padding: 60px 15px;
-  }
-
-  .about-content {
-    padding: 15px;
-  }
-
-  .about-content h2 {
-    font-size: 26px;
-  }
-
-  .acm {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .acm p {
-    font-size: 20px;
-  }
-
-  .lo,
-  .lo1 {
-    width: 90px;
-    margin-bottom: 10px;
-  }
-
-  .core-title {
-    font-size: 34px;
-  }
-
-}
-
-
-/* ======================
-   SMALL MOBILE
-====================== */
-
-@media (max-width:480px) {
-
-  .about-content h2 {
-    font-size: 22px;
-  }
-
-  .acm p {
-    font-size: 18px;
-    line-height: 1.5;
-  }
-
-  .core-title {
-    font-size: 28px;
-  }
-
-  .lo,
-  .lo1 {
-    width: 70px;
-  }
-
 }
 
 
@@ -1470,132 +1198,6 @@
   transition: transform 0.5s ease;
 }
 
-/* ======================
-   LARGE TABLET
-====================== */
-@media (max-width:1200px) {
-
-  .content-box {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .content-box h2 {
-    font-size: 30px;
-  }
-
-  .content-box p {
-    font-size: 22px;
-  }
-
-}
-
-
-/* ======================
-   TABLET MODE
-====================== */
-@media (max-width:992px) {
-
-  .hero-slider-container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .image-stack {
-    width: 100%;
-    height: 320px;
-  }
-
-  .img img {
-    height: 320px;
-  }
-
-  .hero-slide-content {
-    width: 100%;
-    height: auto;
-    padding: 30px;
-  }
-
-  .content-box {
-    width: 100%;
-  }
-
-}
-
-
-/* ======================
-   MOBILE MODE
-====================== */
-@media (max-width:768px) {
-
-  .image-stack {
-    height: 260px;
-  }
-
-  .img img {
-    height: 260px;
-  }
-
-  .content-box h2 {
-    font-size: 26px;
-  }
-
-  .content-box p {
-    font-size: 18px;
-  }
-
-  .arrow {
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
-  }
-
-  .slider-dots {
-    gap: 25px;
-  }
-
-  .dot {
-    width: 18px;
-    height: 18px;
-  }
-
-}
-
-
-/* ======================
-   SMALL MOBILE
-====================== */
-@media (max-width:480px) {
-
-  .image-stack {
-    height: 220px;
-  }
-
-  .img img {
-    height: 220px;
-  }
-
-  .hero-slide-content {
-    padding: 20px;
-  }
-
-  .content-box {
-    padding: 15px;
-  }
-
-  .content-box h2 {
-    font-size: 22px;
-  }
-
-  .content-box p {
-    font-size: 16px;
-  }
-
-}
-
-
-
 
 /* ============================= */
 /* LOAN ASSISTANCE SECTION */
@@ -1699,130 +1301,6 @@
   margin-bottom: 10px;
 }
 
-/* ======================
-   LARGE TABLET
-====================== */
-@media (max-width:1200px) {
-
-  .loan_container {
-    right: 120px;
-  }
-
-  .loan-options {
-    left: 40px;
-  }
-
-  .loan-pill {
-    width: 420px;
-  }
-
-  .loan-image img {
-    width: 380px;
-  }
-
-}
-
-
-/* ======================
-   TABLET MODE
-====================== */
-@media (max-width:992px) {
-
-  .assistance_container {
-    flex-direction: column;
-    gap: 40px;
-    padding: 40px 0;
-  }
-
-  .loan_container {
-    position: relative;
-    right: auto;
-    bottom: auto;
-  }
-
-  .loan-options {
-    left: 0;
-    align-items: center;
-  }
-
-  .loan-pill {
-    width: 90%;
-    max-width: 500px;
-  }
-
-  .loan-image {
-    height: auto;
-    text-align: center;
-  }
-
-  .loan-image img {
-    position: relative;
-    right: auto;
-    width: 340px;
-  }
-
-}
-
-
-/* ======================
-   MOBILE
-====================== */
-@media (max-width:768px) {
-
-  .section-title {
-    font-size: 42px;
-    text-align: center;
-  }
-
-  .section-subtitle {
-    font-size: 26px;
-  }
-
-  .loan-pill {
-    gap: 20px;
-    padding: 12px 20px;
-  }
-
-  .loan-pill button {
-    font-size: 26px;
-  }
-
-  .loan-pill img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .loan-image img {
-    width: 280px;
-  }
-
-}
-
-
-/* ======================
-   SMALL MOBILE
-====================== */
-@media (max-width:480px) {
-
-  .section-title {
-    font-size: 32px;
-  }
-
-  .loan-pill {
-    width: 95%;
-    border-radius: 25px;
-  }
-
-  .loan-pill button {
-    font-size: 22px;
-  }
-
-  .loan-image img {
-    width: 230px;
-  }
-
-}
-
 
 /* ============================= */
 /* WHY KHUSHI */
@@ -1884,102 +1362,6 @@
   font-size: 40px;
   color: #fff;
 }
-
-/* ======================
-   LARGE TABLET
-====================== */
-@media (max-width:1200px) {
-
-  .why-khushi {
-    height: auto;
-    padding: 60px 0;
-  }
-
-  .why-content h2 {
-    position: relative;
-    bottom: auto;
-    margin-bottom: 40px;
-    font-size: 48px;
-  }
-
-  .why-content li {
-    top: 40px;
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-}
-
-
-/* ======================
-   TABLET
-====================== */
-@media (max-width:992px) {
-
-  .why-container {
-    padding: 40px 40px;
-  }
-
-  .why-content h2 {
-    font-size: 40px;
-  }
-
-  .why-content li {
-    top: 20px;
-    font-size: 28px;
-    margin-bottom: 40px;
-  }
-
-}
-
-
-/* ======================
-   MOBILE
-====================== */
-@media (max-width:768px) {
-
-  .why-khushi {
-    padding: 40px 0;
-  }
-
-  .why-container {
-    padding: 30px 20px;
-  }
-
-  .why-content h2 {
-    font-size: 32px;
-    text-align: center;
-  }
-
-  .why-content ul {
-    padding-left: 30px;
-  }
-
-  .why-content li {
-    top: 0;
-    font-size: 22px;
-    margin-bottom: 25px;
-    line-height: 32px;
-  }
-
-}
-
-
-/* ======================
-   SMALL MOBILE
-====================== */
-@media (max-width:480px) {
-
-  .why-content h2 {
-    font-size: 26px;
-  }
-
-  .why-content li {
-    font-size: 18px;
-  }
-
-}
-
 
 
 /* =========================== */
@@ -2135,65 +1517,6 @@
   background: rgba(255, 192, 97, 0.85);
 }
 
-/* ======================
-   LARGE TABLET
-====================== */
-@media (max-width:1200px) {
-
-  .how-title h2 {
-    font-size: 48px;
-    top: -30px;
-  }
-
-  .steps-grid {
-    gap: 60px;
-    top: -30px;
-  }
-
-  .step-card {
-    width: 75%;
-    height: auto;
-    padding: 35px;
-  }
-
-  .step-icon img {
-    width: 85px;
-  }
-
-  .step-card p {
-    font-size: 22px;
-  }
-
-}
-
-
-/* ======================
-   TABLET
-====================== */
-@media (max-width:992px) {
-
-  .steps-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .step-card {
-    width: 80%;
-  }
-
-  .step-icon img {
-    width: 60px;
-  }
-
-  .step-card p {
-    font-size: 18px;
-  }
-
-  .how-title h2 {
-    font-size: 28px;
-  }
-
-}
 
 /* ============================= */
 /* CTA SECTION */
@@ -2294,149 +1617,464 @@
   background: #f2ad46;
 }
 
-/* ======================
-   LARGE TABLET
-====================== */
-@media (max-width:1200px){
+@media (max-width: 1024px) {
 
-  .ct-container{
-    height:580px;
+  html,
+  body {
+    overflow-x: hidden;
   }
 
-  .ct-title h2{
-    font-size:55px;
-    left:40px;
+  .page-scaler {
+    transform: scale(0.7);
+    transform-origin: top left;
+    width: 143%;
   }
 
-  .ct-title h1{
-    font-size:110px;
-    right:180px;
+  .hero-image img {
+    width: 550px;
   }
 
-  .ct-image img{
-    width:240px;
-    left:200px;
+  .content-box h2 {
+    font-size: 48px;
   }
 
-  .ct-content p{
-    font-size:42px;
-    width:360px;
+  .loan-layout {
+    height: 750px;
   }
 
-  .primary-btn{
-    font-size:28px;
-    width:260px;
-    left:120px;
-    top:250px;
+  .loan-image img {
+    position: absolute;
+    right: 30px;
+    margin-top: 75px;
   }
 
-}
-
-
-/* ======================
-   TABLET
-====================== */
-@media (max-width:992px){
-
-  .ct-container{
-    height:auto;
-    padding-bottom:80px;
+  .section-title {
+    font-size: 80px;
   }
 
-  .ct-divider{
-    flex-direction:column;
+  .loan-pill {
+    width: 620px;
+    gap: 38px;
+    padding: 22px 55px;
   }
 
-  .ct-title h2{
-    position:static;
-    width:100%;
-    text-align:center;
-    font-size:48px;
-    margin-bottom:10px;
+  .loan-pill img {
+    width: 68px;
+    height: 65px;
   }
 
-  .ct-title h1{
-    position:static;
-    text-align:center;
-    font-size:90px;
+  .loan_container {
+    position: absolute;
+    right: 280px;
+    bottom: 14px;
   }
 
-  .ct-image img{
-    position:static;
-    margin:20px auto;
-    display:block;
+  .loan-pill button {
+    font-size: 44px;
   }
 
-  .ct-content{
-    align-items:center;
-    left:0;
-    bottom:0;
+  .section-subtitle {
+    font-size: 56px;
   }
 
-  .ct-content p{
-    position:static;
-    text-align:center;
-    width:auto;
-    font-size:34px;
-  }
-
-  .primary-btn{
-    position:static;
-    margin-top:20px;
+  .ct-title h1 {
+    font-size: 180px;
+    position: absolute;
+    top: 22px;
+    right: 300px;
   }
 
 }
 
+@media (max-width: 768px) {
 
-/* ======================
-   MOBILE
-====================== */
-@media (max-width:768px){
-
-  .ct-title h2{
-    font-size:36px;
+  html,
+  body {
+    overflow-x: hidden;
   }
 
-  .ct-title h1{
-    font-size:60px;
+  .page-scaler {
+    transform: scale(0.52);
+    transform-origin: top left;
+    width: 192%;
   }
 
-  .ct-image img{
-    width:200px;
+
+  .hero-image img {
+    width: 450px;
+
   }
 
-  .ct-content p{
-    font-size:26px;
+  .content-box h2 {
+    font-size: 40px;
   }
 
-  .primary-btn{
-    font-size:22px;
-    width:220px;
-    line-height:36px;
+  .loan-layout {
+    height: 685px;
   }
+
+  .loan-image img {
+    position: absolute;
+    right: 20px;
+    margin-top: 65px;
+  }
+
+  .section-title {
+    font-size: 70px;
+  }
+
+
+  .loan-pill {
+    width: 535px;
+    gap: 33px;
+    padding: 20px 50px
+  }
+
+  .loan-pill img {
+    width: 60px;
+    height: 57px;
+  }
+
+  .loan_container {
+    position: absolute;
+    right: 220px;
+    bottom: 12px;
+  }
+
+  .loan-pill button {
+    font-size: 40px;
+  }
+
+  .section-subtitle {
+    font-size: 50px;
+  }
+
+  .ct-title h1 {
+    font-size: 160px;
+    position: absolute;
+    top: 20px;
+    right: 250px;
+  }
+
 
 }
 
 
-/* ======================
-   SMALL MOBILE
-====================== */
-@media (max-width:480px){
+@media (max-width: 768px) {
 
-  .ct-title h2{
-    font-size:28px;
+  html,
+  body {
+    overflow-x: hidden;
   }
 
-  .ct-title h1{
-    font-size:44px;
+  .page-scaler {
+    transform: scale(0.52);
+    transform-origin: top left;
+    width: 192%;
   }
 
-  .ct-image img{
-    width:170px;
+
+  .hero-image img {
+    width: 450px;
+
   }
 
-  .ct-content p{
-    font-size:22px;
+  .content-box h2 {
+    font-size: 40px;
   }
 
+  .loan-layout {
+    height: 685px;
+  }
+
+  .loan-image img {
+    position: absolute;
+    right: 20px;
+    margin-top: 65px;
+  }
+
+  .section-title {
+    font-size: 70px;
+  }
+
+
+  .loan-pill {
+    width: 535px;
+    gap: 33px;
+    padding: 20px 50px
+  }
+
+  .loan-pill img {
+    width: 60px;
+    height: 57px;
+  }
+
+  .loan_container {
+    position: absolute;
+    right: 220px;
+    bottom: 12px;
+  }
+
+  .loan-pill button {
+    font-size: 40px;
+  }
+
+  .section-subtitle {
+    font-size: 50px;
+  }
+
+  .ct-title h1 {
+    font-size: 160px;
+    position: absolute;
+    top: 20px;
+    right: 250px;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .page-scaler {
+    transform: scale(0.38);
+    transform-origin: top left;
+    width: 263%;
+  }
+
+
+  .hero-image img {
+    width: 450px;
+  }
+
+  .content-box h2 {
+    font-size: 32px;
+  }
+
+  .loan_container {
+    position: absolute;
+    right: 120px;
+  }
+
+  .section-title {
+    font-size: 60px;
+  }
+
+  .loan-pill {
+    width: 470px;
+    gap: 30px;
+    padding: 20px 25px;
+  }
+
+  .loan-pill img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .loan-pill button {
+    font-size: 35px;
+  }
+
+  .section-subtitle {
+    font-size: 35px;
+  }
+
+  .why-khushi {
+    height: 680px;
+  }
+
+  .why-content h2 {
+    font-size: 55px;
+    position: absolute;
+    bottom: 255px;
+  }
+
+  .why-content li {
+    margin-bottom: 45px;
+    font-size: 37px;
+    position: relative;
+    top: 55px;
+  }
+
+  .clarity-section {
+    height: 550px;
+  }
+
+  .clarity-image img {
+    width: 570px;
+    height: 525px;
+  }
+
+  .how-it-works {
+    padding: 40px 0;
+  }
+
+  .how-title h2 {
+    font-size: 70px;
+    position: relative;
+    top: -80px;
+  }
+
+  .step-card {
+    width: 70%;
+    height: 298px;
+  }
+
+  .ct-title h1 {
+    font-size: 140px;
+    position: absolute;
+    top: 45px;
+    right: 110px;
+  }
+
+  .ct-image img {
+    position: absolute;
+    bottom: -24px;
+    left: 200px;
+  }
+
+  .ct-content p {
+    position: absolute;
+    left: -85px;
+    top: 45px;
+  }
+
+  .primary-btn {
+    position: absolute;
+    left: 50px;
+    top: 300px;
+  }
+
+
+}
+
+@media (max-width: 390px) {
+  .page-scaler {
+    transform: scale(0.33);
+    transform-origin: top left;
+    width: 303%;
+  }
+
+
+  .hero-image img {
+    width: 450px;
+  }
+
+  .features-image img {
+    width: 100%;
+    height: 420px;
+
+  }
+
+  .content-box h2 {
+    font-size: 30px;
+  }
+
+  .content-box p {
+    font-size: 20px;
+  }
+
+  .loan-layout {
+    height: 645px;
+  }
+
+  .loan-image img {
+    position: absolute;
+    right: 10px;
+    margin-top: 50px;
+  }
+
+  .section-title {
+    font-size: 60px;
+  }
+
+
+  .loan-pill {
+    width: 430px;
+    gap: 30px;
+    padding: 15px 15px;
+  }
+
+  .loan-pill img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .loan-pill button {
+    font-size: 30px;
+  }
+
+
+
+  .loan_container {
+    position: absolute;
+    right: 38px;
+    bottom: 25px;
+  }
+
+  .section-subtitle {
+    font-size: 30px;
+  }
+
+  .why-khushi {
+    height: 590px;
+  }
+
+  .why-content h2 {
+    font-size: 50px;
+    position: absolute;
+    bottom: 190px;
+  }
+
+  .why-content li {
+    margin-bottom: 30px;
+    font-size: 32px;
+    position: relative;
+    top: 55px;
+  }
+
+  .clarity-image img {
+    width: 500px;
+    height: 525px;
+  }
+
+  .clarity-text h2 {
+    font-size: 50px;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .clarity-text p {
+    font-size: 35px;
+    position: absolute;
+    top: -60px;
+  }
+
+  .step-card {
+    width: 80%;
+    height: 298px;
+  }
+
+  .ct-image img {
+    position: absolute;
+    bottom: -24px;
+    left: 150px;
+  }
+
+  .ct-title h1 {
+    font-size: 130px;
+    position: absolute;
+    top: 55px;
+    right: 40px;
+  }
+
+  .ct-content p {
+    position: absolute;
+    left: -105px;
+    top: 45px;
+  }
+
+  .primary-btn {
+    position: absolute;
+    left: 10px;
+    top: 300px;
+  }
 }

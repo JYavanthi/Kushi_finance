@@ -16,12 +16,15 @@ import whybg from "../assets/why_bg3.png"
 import control from "../assets/control.png"
 import lo from "../assets/fp/lo.png"
 
+import useScaleGap from "../usescale";
+
 
 const Hero = () => {
   const [showPopup, setShowPopup] = useState(false);
   const loanRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const location = useLocation();
+  useScaleGap()
 
   useEffect(() => {
     if (location.hash) {
@@ -36,7 +39,7 @@ const Hero = () => {
 
 
   return (
-    <>
+    <div className="page-scaler">
       <section className="hero">
         <div className="hero-text">
           <h1>
@@ -330,7 +333,7 @@ const Hero = () => {
         </div>
       </section>
 
-    </>
+    </div>
   )
 }
 export default Hero

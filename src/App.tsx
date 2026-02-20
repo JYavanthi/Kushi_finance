@@ -11,6 +11,7 @@ import Terms from "./terms/terms.tsx"
 import HomeLoan from "./loans/home_l/home_loan.tsx"
 import BusinessLoan from "./loans/buisness_l/bu.tsx"
 import StudentLoan from "./loans/edu_l/st.tsx"
+import LoanCalculator from "./calculator/loancalculator.tsx"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/hl" element={<><HomeLoan/></>}/>
         <Route path="/bl" element={<><BusinessLoan/></>}/>
         <Route path="/sl" element={<><StudentLoan/></>} />
+        <Route path="/C" element={<><LoanCalculator/></>} />
       </Routes>
       <Footer />
     </BrowserRouter>

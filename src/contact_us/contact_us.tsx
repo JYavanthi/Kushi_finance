@@ -1,66 +1,153 @@
 import "./contact_us.css";
 import cu from "../assets/cu.jpeg";
+import { useState } from "react";
 
 const ContactUs = () => {
+
+    const [formData, setFormData] = useState({
+        FirstName: "",
+        LastName: "",
+        Email: "",
+        Phone: "",
+        Address: "",
+        AadhaarNo: "",
+        PANNo: "",
+        CreatedBy: 1
+    });
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch("http://localhost:5000/users", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.text();
+            alert(result);
+
+            // Reset form
+            setFormData({
+                FirstName: "",
+                LastName: "",
+                Email: "",
+                Phone: "",
+                Address: "",
+                AadhaarNo: "",
+                PANNo: "",
+                CreatedBy: 1
+            });
+
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Failed to send data");
+        }
+    };
+
     return (
         <section className="contact-page">
 
-            {/* TOP IMAGE */}
             <div className="contact-banner">
                 <img src={cu} alt="Contact Us" />
             </div>
 
-            {/* MAIN CONTENT */}
             <div className="contact-container">
 
-                {/* LEFT FORM */}
                 <div className="contact-form">
 
                     <div className="co-title">
-
                         <h2>Send us a message</h2>
-
                         <p className="subtitle">
-                            Do you have a question? A complaint? Or need help to get the right
-                            advice? Feel free to contact us
+                            Do you have a question? Feel free to contact us
                         </p>
-
                     </div>
 
-                    <div className="form-row">
-                        <div className="field">
-                            <label>First Name</label>
-                            <input type="text" placeholder="Enter your first name" />
-                        </div>
+                    <form onSubmit={handleSubmit}>
 
-                        <div className="field">
-                            <label>Last Name</label>
-                            <input type="text" placeholder="Enter your last name" />
-                        </div>
-                    </div>
+                        <div className="form-row">
+                            <div className="field">
+                                <label>First Name</label>
+                                <input
+                                    type="text"
+                                    name="FirstName"
+                                    value={formData.FirstName}
+                                    onChange={handleChange}
+                                    placeholder="Enter your first name"
+                                    required
+                                />
+                            </div>
 
-                    <div className="form-row">
-                        <div className="field">
-                            <label>Email</label>
-                            <input type="email" placeholder="Enter your email" />
-                        </div>
-
-                        <div className="field">
-                            <label>Contact Details</label>
-                            <div className="phone-input">
-                                <span>+91</span>
-                                <input type="text" placeholder="Enter your Phone No." />
+                            <div className="field">
+                                <label>Last Name</label>
+                                <input
+                                    type="text"
+                                    name="LastName"
+                                    value={formData.LastName}
+                                    onChange={handleChange}
+                                    placeholder="Enter your last name"
+                                    required
+                                />
                             </div>
                         </div>
-                    </div>
 
-                    <div className="field">
-                        <label>Message</label>
-                        <textarea placeholder="Message"></textarea>
-                    </div>
+                        <div className="form-row">
+                            <div className="field">
+                                <label>Email</label>
+                                <input
+                                    type="email"
+                                    name="Email"
+                                    value={formData.Email}
+                                    onChange={handleChange}
+                                    placeholder="Enter your email"
+                                    required
+                                />
+                            </div>
 
-                    <button className="send-btn">Send a Message</button>
+                            <div className="field">
+                                <label>Contact Details</label>
+                                <div className="phone-input">
+                                    <span>+91</span>
+                                    <input
+                                        type="text"
+                                        name="Phone"
+                                        value={formData.Phone}
+                                        onChange={handleChange}
+                                        placeholder="Enter your Phone No."
+                                        required
+                                    />
+                                </div>
+                            </div>
+                        </div>
 
+                        <div className="field">
+                            <label>Address</label>
+                            <textarea
+                                name="Address"
+                                value={formData.Address}
+                                onChange={handleChange}
+                                placeholder="Enter your address"
+                                required
+                            />
+                        </div>
+
+                        <button type="submit" className="send-btn">
+                            Send a Message
+                        </button>
+
+                    </form>
 
                 </div>
 

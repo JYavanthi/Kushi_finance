@@ -87,6 +87,13 @@ import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const isMobile = () => window.innerWidth <= 768;
+
+  const handleDropdownClick = () => {
+    if (isMobile()) setOpenDropdown(!openDropdown);
+  };
 
   return (
     <nav className="navbar">
@@ -94,7 +101,16 @@ const Navbar = () => {
         <img src={logo} className="logo" alt="Khushi Finance Logo" />
       </div>
 
-      <ul>
+      <button
+        className={`navbar-toggle ${menuOpen ? "open" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul className={menuOpen ? "nav-open" : ""}>
         <li>
           <NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""}>
             Home
@@ -109,9 +125,10 @@ const Navbar = () => {
 
         {/* Dropdown */}
         <li
-          className="dropdown"
-          onMouseEnter={() => setOpenDropdown(true)}
-          onMouseLeave={() => setOpenDropdown(false)}
+          className={`dropdown ${openDropdown ? "dd-open" : ""}`}
+          onMouseEnter={() => !isMobile() && setOpenDropdown(true)}
+          onMouseLeave={() => !isMobile() && setOpenDropdown(false)}
+          onClick={handleDropdownClick}
         >
           <span>
             Loans <i className="fa-solid fa-angle-down"></i>
@@ -119,27 +136,19 @@ const Navbar = () => {
 
           {openDropdown && (
             <ul className="dd">
-              <li>
-                <NavLink to="/pl">Personal Loan</NavLink>
-              </li>
-              <li>
-                <NavLink to="/hl">Home Loan</NavLink>
-              </li>
-              <li>
-                <NavLink to="/bl">Business Loan</NavLink>
-              </li>
-              <li>
-                <NavLink to="/sl">Student Loan</NavLink>
-              </li>
+              <li><NavLink to="/pl">Personal Loan</NavLink></li>
+              <li><NavLink to="/hl">Home Loan</NavLink></li>
+              <li><NavLink to="/bl">Business Loan</NavLink></li>
+              <li><NavLink to="/sl">Student Loan</NavLink></li>
             </ul>
-          )} 
+          )}
         </li>
 
-        {/* <li>
+        <li>
           <NavLink to="/C" className={({ isActive }) => isActive ? "active" : ""}>
             Calculators
           </NavLink>
-        </li> */}
+        </li>
 
         <li>
           <NavLink to="/au" className={({ isActive }) => isActive ? "active" : ""}>
